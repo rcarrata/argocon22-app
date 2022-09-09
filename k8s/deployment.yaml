@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: argocon22-app
+  name: argocon22-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: argocon22-app
+  template:
+    metadata:
+      labels:
+        app: argocon22-app
+    spec:
+      containers:
+        - image: quay.io/rcarrata/argocon22-app:latest
+          imagePullPolicy: Always
+          name: argocon22-app
+          ports:
+            - containerPort: 9000
+              protocol: TCP
