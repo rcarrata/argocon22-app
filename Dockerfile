@@ -7,5 +7,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -installsuffix cgo -o ./app .
 FROM busybox
 COPY --from=0 /argocon/app .
 COPY --from=0 /argocon/ui/ ui
+RUN echo "Hacking Dockerfile" >> /app/hacked
 EXPOSE 8080
 CMD ["/app"]
