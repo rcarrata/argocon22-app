@@ -1,0 +1,29 @@
+{{template "base" .}}
+
+{{define "title"}}RCK Status{{end}}
+
+{{define "body"}}
+    <section>
+        <h1><center>RCK Status</center>
+        </h1>
+        <pre> </pre>
+
+         <table>
+        <tr>
+            <th>Component</th>
+            <th>Microservice</th>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>{{.Status}}</td>
+        </tr>
+        <tr>
+            <td>Monitoring</td>
+            <td>{{.Monitoring}}</td>
+        </table> 
+    </section>
+
+
+</body
+</html>
+{{end}}
