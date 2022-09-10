@@ -15,9 +15,9 @@ spec:
         app: argocon22-app
     spec:
       containers:
-        - image: quay.io/rcarrata/argocon22-app:latest
+        - image: ghcr.io/rcarrata/argocon22-app:v2
           imagePullPolicy: Always
           name: argocon22-app
           ports:
-            - containerPort: 9000
+            - containerPort: 8080
               protocol: TCP
